@@ -1,0 +1,17 @@
+/* css - cascading style sheet */
+
+body {
+    background-color: orange;
+}
+
+h1 {
+    background-color: green;
+}
+
+.funky {
+    color: blue;
+}
+
+#firstp {
+    color: red;
+}
