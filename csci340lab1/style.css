@@ -1,10 +1,10 @@
 /* css - cascading style sheet */
 
 body {
-  font-family: 'Georgia', sans-serif;
+  /* font-family: 'Georgia', sans-serif; */
   font-weight: 200;
   background-color: lightblue;
-  background-image: url("/Users/jeanclaudentambara/Desktop/Fall2023/DatabaseWebSystems/labs/jcntambara15.github.io/static/images/grand_prismatic_spring_yellowstone.jpg");
+  background-image: url("../static/images/grand_prismatic_spring_yellowstone.jpg");
   background-size:auto;
 }
 
