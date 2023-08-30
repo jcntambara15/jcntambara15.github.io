@@ -1,7 +1,7 @@
 /* css - cascading style sheet */
 
 body {
-  /* font-family: 'Georgia', sans-serif; */
+  font-family: 'Roboto', sans-serif;
   font-weight: 200;
   background-color: lightblue;
   background-image: url("../static/images/grand_prismatic_spring_yellowstone.jpg");
@@ -10,7 +10,6 @@ body {
 
 header {
   padding: 2px 0;
-  margin: 10px;
 }
 
 header .row,
@@ -69,9 +68,7 @@ li {
 footer {
   font-size: 15px;
   padding: 3px 0;
-  margin: 20px;
-  margin-bottom: 0px;
-  margin-top: 5px;
+  margin-top: 15px;
 }
 
 footer ul {
