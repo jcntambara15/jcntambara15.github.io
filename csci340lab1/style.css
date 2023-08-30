@@ -1,17 +1,84 @@
 /* css - cascading style sheet */
 
 body {
-    background-color: orange;
-}
+    font-family: 'Georgia', sans-serif;
+    font-weight: 200;
+    background-color: lightblue;
+    background-image: url("/Users/jeanclaudentambara/Documents/Fall 2023/Database and Web Systems/jcntambara15.github.io/csci340lab1/grand_prismatic_spring_yellowstone.jpg");
+    background-size:auto;
+  }
+  
+  header {
+    padding: 2px 0;
+    margin: 10px;
+  }
+  
+  header .row,
+  footer .row {
+    display: flex;
+    align-items:center;
+    background-color: lightblue;
+  }
+  
+  header h1 {
+    font-weight: 800;
+    margin: 0;
+    font-size: large;
+  }
+  
+  header nav {
+    display: flex;
+    justify-content: flex-end;
+    font-size: x-large;
+  }
+  
+  header p {
+    padding: 0 20px;
+    margin: 0;
+  }
+  
+  section .row img {
+    margin: 20px 0 30px;
+    width: 100%;
+    margin-top: 10px;
+  }
 
-h1 {
-    background-color: green;
-}
+  section .row p{
+    text-align: left;
+    color: #ffffff;
+    text-shadow: 0.25px 0.25px 0.25px lightblue;
+    font-size: large;
+    margin-top: 30px;
+  }
 
-.funky {
-    color: blue;
-}
+  section .row h3{
+    color: #ffffff;
+    text-shadow: 0.25px 0.25px 0.25px lightblue;
+    text-align: center;
+  }
+  
+  li {
+    color: #ffffff;
+    align-content: center;
+  }
 
-#firstp {
-    color: red;
-}
+  .col-md-6 {
+    margin: 0 0 30px;
+  }
+  
+  footer {
+    font-size: 15px;
+    padding: 3px 0;
+    margin: 20px;
+    margin-bottom: 0px;
+    margin-top: 5px;
+  }
+  
+  footer ul {
+    list-style: none;
+  }
+  
+  footer p {
+    margin-left: 20px;
+    font-weight: 700;
+  }
