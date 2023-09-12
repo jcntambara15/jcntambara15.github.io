@@ -1,0 +1,135 @@
+/* css - cascading style sheet */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    /* background-color: blanchedalmond; */
+    /* background-color: lightblue; */
+    background-image: url("../static/images/bruxelles_disque_jade_xuanji.jpg");
+    background-size:cover;
+  }
+  
+  header {
+    padding: 0px 0;
+  }
+  
+  header .row,
+  footer .row {
+    display: flex;
+    align-items:center;
+    background-color: lightblue;
+  }
+  
+  header h1 {
+    font-weight: 800;
+    margin: 40px;
+    font-size: large;
+    padding-top: 20px;
+  }
+  
+  header nav {
+    display: flex;
+    justify-content: flex-end;
+    font-size: x-large;
+  }
+  
+  header p {
+    padding: 0 20px;
+    margin: 0;
+  }
+  
+  section .row img {
+    margin: 20px 0 30px;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  section .row p{
+    text-align: center;
+    color: black;
+    text-shadow: 0.25px 0.25px 0.25px lightblue;
+    font-size: large;
+    margin-top: 30px;
+  }
+
+  section .row #ran-art, #ran-fort {
+    color: white;
+  }
+
+  section .row h4 {
+    text-align: center;
+    color: white;
+  }
+  
+  section .row h3{
+    color: white;
+    text-shadow: 0.25px 0.25px 0.25px lightblue;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  li {
+    color: #272525;
+    align-content: center;
+  }
+  
+  .col-md-6 {
+    margin: 0 0 30px;
+  }
+  
+  .button-clicker {
+    text-align: center;
+  }
+
+  .artist-display, .credit-line {
+    min-height: 100px;
+    background-color: gainsboro;
+    border: 5px solid #423ab8;
+    padding:10px;
+    margin: 60px;
+   
+ }
+ 
+ #clicker {
+    fill: aqua;
+    background-color: aliceblue;
+ }
+
+ #button {
+    margin-top: 100px;
+ }
+
+  footer {
+    font-size: 15px;
+    /* padding: 3px 0; */
+    padding: 0px;
+    margin-top: 400px;
+    margin-bottom: 0px;
+    background-color: rgb(102, 102, 199);
+  }
+  
+  footer ul {
+    list-style: none;
+  }
+  
+  footer p {
+    margin-left: 20px;
+    font-weight: 700;
+  }
+  
+
+  .jumbotron {
+    display: flex;
+    align-items: center;
+    background-image: url('../static/images/pyxis_with_lid_agora.jpg');
+    background-size: cover;
+    color: #ffffff;
+    height: 500px;
+    text-shadow: 0.25px 0.25px 0.25px #000000;
+  }
+  
+  
+  .jumbotron h3 {
+    margin: 0 0 20px;
+    color: #fff;
+  }
