@@ -25,7 +25,10 @@
 <section class="jumbotron">
     <div class="container">
       <div class="row text-center">
-        <h3>Exploring Some Random Interesting Pieces of Art</h3>
+        <h3>Exploring Some Interesting Pieces of Art</h3>
+        <p><i>I have no idea if these are really some real arts, if you observe them closely, everything looks blury.<br>
+        If you try out the <b>generate art</b> button below and you also happen to wonder whether what you're getting is a piece of art. 
+        Let's analyse it together. This website makes a call to the Art Institute of Chicago API, which is supposed to help us access the museum's public data.</i></p>
       </div>
   
     </div>
@@ -50,13 +53,14 @@
 <section class="container">
     <div class="row">
         <figure class="col-sm-6">
-            <p id="ran-art">Your New Art</p>
+            <p id="ran-art">Supposedly Generated Art from Art Institute of Chicago API</p>
             <img id="gold" src="../static/images/JCC.jpg" alt="" width="250" height="400">
         </figure>
     
         <figure class="col-sm-6">
-            <p id="ran-fort">Fortune</p>
-            <img id="visitor" src="../static/images/visitor_tour_bus_visitors.jpg" alt="" width="250" height="400">
+            <p id="ran-fort">Related Art Book recommendation from Open Library API</p>
+            <p class="art-book">
+            </p>
         </figure>
     </div>
     
@@ -64,8 +68,12 @@
 
 <section class="container">
     <div class="row">
-        <div id="button" class="col-sm-4">
-            <input id="clicker" type="button" value="Generate Random Arts"></input>
+        <div id="generate" class="col-sm-2">
+            <input id="clicker" type="button" value="Generate Arts"></input>
+        </div>
+
+        <div id="clear" class="col-sm-2">
+            <input id="reset" type="button" value="Reset"></input>
         </div>
 
         <div class="col-sm-4">
@@ -75,7 +83,7 @@
         </div>
     
         <div class="col-sm-4">
-            <h4>The Art's Credit Line</h4>
+            <h4>The Art's Description or Credit Line</h4>
             <p class="credit-line">
             </p>
         </div>

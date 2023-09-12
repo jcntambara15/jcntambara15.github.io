@@ -2,13 +2,12 @@ $(document).ready(function () {
     $('#clicker').click(function () {
       $.ajax({
         dataType: "json",
-        url: "https://api.artic.edu/api/v1/artworks?page=2&limit=40",
-        // url:"https://api.artic.edu/api/v1/artworks/search?q=cats",
+        url: "https://api.artic.edu/api/v1/artworks?page=2&limit=20",
         success: function (results) {
           var filteredResults = results.data.filter(function (item) {
             return item.thumbnail.lqip.includes("/gif");
           });
-  
+
           if (filteredResults.length > 0) {
             // Generate a random index within the filtered results
             var randomIndex = Math.floor(Math.random() * filteredResults.length);
@@ -17,7 +16,32 @@ $(document).ready(function () {
             $('#gold').attr("src", randomItem.thumbnail.lqip);
             $('.artist-display').text(randomItem.artist_display);
             $('.artist-display').css("background-size", "cover");
-            $('.credit-line').text(randomItem.credit_line);
+            if (randomItem.description !== null){
+                $('.credit-line').text(randomItem.description);
+            } else {
+                $('.credit-line').text(`No Description Found! The art's credit line is given below instead: ${randomItem.credit_line}`);
+            }
+
+            $.ajax({
+                dataType: "json",
+                url: "https://openlibrary.org/subjects/art.json",
+                success: function(jobResults){
+                    /* Need to know why this doesn't work anad how it would work. 
+                    var startValue = 0;
+                    for (var i = startValue; i < 20; i++){
+                        if (randomItem.artist_display.includes("American")){
+                            $('.art-book').text(`Book title: ${jobResults["works"][i]["title"]}, "  "\n Book subject: ${jobResults["works"][i]["subject"].join(', ')}`);
+                        }
+                    }
+                   startValue = i + 1;
+                    */
+                if (randomItem.artist_display.includes("American")){
+                    $('.art-book').text(`Book title: ${jobResults["works"][2]["title"]}, "  "\n Book subject: ${jobResults["works"][2]["subject"].join(', ')}`);
+                }
+
+                }
+            })
+  
           } else {
             // Handle the case when no items match the condition
             $('#gold').attr("src", ""); // Clear the image
@@ -29,5 +53,13 @@ $(document).ready(function () {
         }
       });
     });
+
+    $('#reset').click(function () {
+        $('#gold').attr("src", "../static/images/JCC.jpg");
+        $('.artist-display').text("");
+        $('.credit-line').text("");
+        $('.art-book').text("");
+      });
+
   });
   
