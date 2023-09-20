@@ -25,9 +25,9 @@ $(document).ready(function () {
             $('.artist-display').text(randomItem.artist_display);
             $('.artist-display').css("background-size", "cover");
             if (randomItem.description !== null){
-                $('.credit-line').text(randomItem.description);
+                $('.credit-line').html(randomItem.description);
             } else {
-                $('.credit-line').text(`No Description Found! The art's credit line is given below instead: ${randomItem.credit_line}`);
+                $('.credit-line').html(`No Description Found! The art's credit line is given below instead: ${randomItem.credit_line}`);
             }
 
             $.ajax({
@@ -35,7 +35,7 @@ $(document).ready(function () {
                 url: "https://openlibrary.org/subjects/art.json",
                 success: function(bookResults){
                 if (randomItem.artist_display.includes("American")){
-                    $('.art-book').html(`Book title: ${bookResults["works"][2]["title"]}, "  "\n Book subject: ${bookResults["works"][2]["subject"].join(', ')}`);
+                    $('.art-book').text(`Book title: ${bookResults["works"][2]["title"]}, "  "\n Book subject: ${bookResults["works"][2]["subject"].join(', ')}`);
                 }
 
                 }
