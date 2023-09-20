@@ -5,7 +5,7 @@ $(document).ready(function () {
         url: "https://api.artic.edu/api/v1/artworks",
         success: function (results) {
           var filteredResults = results.data.filter(function (item) {
-            return item.thumbnail.lqip.includes("/gif");
+            return item.thumbnail.lqip.includes("/gif");  
           });
 
           if (filteredResults.length > 0) {
@@ -36,7 +36,7 @@ $(document).ready(function () {
                    startValue = i + 1;
                     */
                 if (randomItem.artist_display.includes("American")){
-                    $('.art-book').text(`Book title: ${bookResults["works"][2]["title"]}, "  "\n Book subject: ${bookResults["works"][2]["subject"].join(', ')}`);
+                    $('.art-book').html(`Book title: ${bookResults["works"][2]["title"]}, "  "\n Book subject: ${bookResults["works"][2]["subject"].join(', ')}`);
                 }
 
                 }
@@ -45,7 +45,7 @@ $(document).ready(function () {
           } else {
             // Handle the case when no items match the condition
             $('#gold').attr("src", ""); // Clear the image
-            $('.fortune').text("No matching items found");
+            $('.art-book').text("No matching items found");
           }
         },
         error: function (xhr, status, error) {

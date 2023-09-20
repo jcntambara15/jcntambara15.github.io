@@ -13,7 +13,7 @@ $(document).ready(function () {
         url: "https://api.artic.edu/api/v1/artworks",
         success: function (results) {
           var filteredResults = results.data.filter(function (item) {
-            return item.thumbnail.lqip.includes("/gif");
+            return item.thumbnail.lqip.includes("/gif"); 
           });
 
           if (filteredResults.length > 0) {
@@ -35,7 +35,7 @@ $(document).ready(function () {
                 url: "https://openlibrary.org/subjects/art.json",
                 success: function(bookResults){
                 if (randomItem.artist_display.includes("American")){
-                    $('.art-book').text(`Book title: ${bookResults["works"][2]["title"]}, "  "\n Book subject: ${bookResults["works"][2]["subject"].join(', ')}`);
+                    $('.art-book').html(`Book title: ${bookResults["works"][2]["title"]}, "  "\n Book subject: ${bookResults["works"][2]["subject"].join(', ')}`);
                 }
 
                 }
