@@ -1,0 +1,3 @@
+[submodule "hugo-site-demo"]
+	path = hugo-site-demo
+	url = https://github.com/jcntambara15/hugo-site-demo.git
